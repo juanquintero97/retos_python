@@ -1,47 +1,85 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
+import java.util.*;
+
 public class Empleado {
-    private String nombre;
-    private String correo;
-    private Empresa empresa;
-    private String rol;
+    private long id;
+    private String name;
+    private String email;
+    private Empresa enterprise;
+    private String role;
+    private ArrayList<MovimientoDinero> transactions;
+    private Date createdAt;
+    private Date updatedAt;
 
-    public Empleado(String nombre,String correo, Empresa empresa,String rol){
-        this.nombre=nombre;
-        this.correo=correo;
-        this.empresa=empresa;
-        this.rol=rol;
+    public Empleado(String name, String email, Empresa enterprise, String role) {
+        this.name = name;
+        this.email = email;
+        this.enterprise = enterprise;
+        this.role = role;
     }
 
-    public String getNombre() {
-        return nombre;
+    public long getId() {
+        return id;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getName() {
+        return name;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Empresa getEmpresa() {
-        return empresa;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getRol() {
-        return rol;
+    public Empresa getEnterprise() {
+        return enterprise;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setEnterprise(Empresa enterprise) {
+        this.enterprise = enterprise;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public ArrayList<MovimientoDinero> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(ArrayList<MovimientoDinero> transactions) {
+        this.transactions = transactions;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

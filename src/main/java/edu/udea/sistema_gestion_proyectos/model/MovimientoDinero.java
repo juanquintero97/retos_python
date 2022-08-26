@@ -1,37 +1,75 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
+import java.util.*;
+
 public class MovimientoDinero {
-    private long montoMovimiento;
-    private String conceptoMovimiento;
-    private Empleado encargadoMovimiento;
+    private long id;
+    private String concept;
+    private float amount;
+    private Empleado user;
+    private Empresa enterprise;
+    private Date createdAt;
+    private Date updatedAt;
 
-    public MovimientoDinero(long montoMovimiento, String conceptoMovimiento, Empleado encargadoMovimiento){
-        this.montoMovimiento=montoMovimiento;
-        this.conceptoMovimiento=conceptoMovimiento;
-        this.encargadoMovimiento=encargadoMovimiento;
+    public MovimientoDinero(String concept, float amount, Empleado user) {
+        this.concept = concept;
+        this.amount = amount;
+        this.user = user;
     }
 
-    public long getMontoMovimiento() {
-        return montoMovimiento;
+    public long getId() {
+        return id;
     }
 
-    public void setMontoMovimiento(long montoMovimiento) {
-        this.montoMovimiento = montoMovimiento;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getConceptoMovimiento() {
-        return conceptoMovimiento;
+    public String getConcept() {
+        return concept;
     }
 
-    public void setConceptoMovimiento(String conceptoMovimiento) {
-        this.conceptoMovimiento = conceptoMovimiento;
+    public void setConcept(String concept) {
+        this.concept = concept;
     }
 
-    public Empleado getEncargadoMovimiento() {
-        return encargadoMovimiento;
+    public float getAmount() {
+        return amount;
     }
 
-    public void setEncargadoMovimiento(Empleado encargadoMovimiento) {
-        this.encargadoMovimiento = encargadoMovimiento;
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
+    public Empleado getUser() {
+        return user;
+    }
+
+    public void setUser(Empleado user) {
+        this.user = user;
+    }
+
+    public Empresa getEnterprise() {
+        return enterprise;
+    }
+
+    public void setEnterprise(Empresa enterprise) {
+        this.enterprise = enterprise;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

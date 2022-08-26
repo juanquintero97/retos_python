@@ -1,40 +1,39 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
+import java.util.*;
+
 public class Empresa {
-    private String nombre;
-    private String direccion;
-    private int telefono;
+    private long id;
+    private String name;
     private String NIT;
+    private String phone;
+    private String adress;
+    private ArrayList<Empleado> users;
+    private ArrayList<MovimientoDinero> transactions;
+    private Date createdAt;
+    private Date updatedAt;
 
-    public Empresa(String nombre,String direccion, int telefono, String NIT){
-        this.nombre=nombre;
-        this.direccion=direccion;
-        this.telefono=telefono;
-        this.NIT=NIT;
+    public Empresa(String name, String NIT, String phone, String adress) {
+        this.name = name;
+        this.NIT = NIT;
+        this.phone = phone;
+        this.adress = adress;
     }
 
-    public String getNombre() {
-        return nombre;
+    public long getId() {
+        return id;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getName() {
+        return name;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getNIT() {
@@ -43,5 +42,53 @@ public class Empresa {
 
     public void setNIT(String NIT) {
         this.NIT = NIT;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public ArrayList<Empleado> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<Empleado> users) {
+        this.users = users;
+    }
+
+    public ArrayList<MovimientoDinero> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(ArrayList<MovimientoDinero> transactions) {
+        this.transactions = transactions;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
