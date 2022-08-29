@@ -6,7 +6,7 @@ import edu.udea.sistema_gestion_proyectos.model.MovimientoDinero;
 
 public class test {
     public static void main(String [] Args){
-        Empresa empresa1 = new Empresa("Equipo 99","900665478-7","3335446","La nube");
+        /*Empresa empresa1 = new Empresa("Equipo 99","900665478-7","3335446","La nube");
         Empleado empleado1 = new Empleado("Juan Quintero", "jquintero@mail.com",empresa1,"Administrador");
         MovimientoDinero movimientoDinero1 = new MovimientoDinero("Proyecto energia solar",50000000,empleado1);
         Empresa empresa2 = new Empresa("MARS","900335879-1","3335566","Bogotá");
@@ -51,7 +51,7 @@ public class test {
 
         System.out.println(movimientoDinero1.getConcept());
         System.out.println(movimientoDinero1.getAmount());
-        System.out.println(movimientoDinero1.getUser().getName());
+        System.out.println(movimientoDinero1.getUser().getName());*/
 
     }
 }

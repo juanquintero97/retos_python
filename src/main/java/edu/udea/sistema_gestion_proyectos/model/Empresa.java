@@ -1,32 +1,45 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
+import org.springframework.lang.NonNull;
 import java.util.*;
 
 public class Empresa {
     private long id;
     private String name;
-    private String NIT;
+    private String document;
     private String phone;
     private String adress;
-    private ArrayList<Empleado> users;
+    private ArrayList<User> users;
     private ArrayList<MovimientoDinero> transactions;
     private Date createdAt;
     private Date updatedAt;
 
-    public Empresa(String name, String NIT, String phone, String adress) {
+    public Empresa(@NonNull long id, String name,
+                   String document,
+                   String phone,
+                   String adress,
+                   ArrayList<User> users,
+                   ArrayList<MovimientoDinero> transactions,
+                   Date createdAt,
+                   Date updatedAt) {
+        this.id = id;
         this.name = name;
-        this.NIT = NIT;
+        this.document = document;
         this.phone = phone;
         this.adress = adress;
+        this.users = users;
+        this.transactions = transactions;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    /*public void setId(long id) {
         this.id = id;
-    }
+    }*/
 
     public String getName() {
         return name;
@@ -36,18 +49,17 @@ public class Empresa {
         this.name = name;
     }
 
-    public String getNIT() {
-        return NIT;
+    public String getDocument() {
+        return document;
     }
 
-    public void setNIT(String NIT) {
-        this.NIT = NIT;
+    public void setDocument(String document) {
+        this.document = document;
     }
 
     public String getPhone() {
         return phone;
     }
-
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -60,11 +72,11 @@ public class Empresa {
         this.adress = adress;
     }
 
-    public ArrayList<Empleado> getUsers() {
+    public ArrayList<User> getUsers() {
         return users;
     }
 
-    public void setUsers(ArrayList<Empleado> users) {
+    public void setUsers(ArrayList<User> users) {
         this.users = users;
     }
 
