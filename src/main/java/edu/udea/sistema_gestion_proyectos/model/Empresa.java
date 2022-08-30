@@ -1,7 +1,9 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
 import org.springframework.lang.NonNull;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Empresa {
     private long id;
@@ -9,7 +11,7 @@ public class Empresa {
     private String document;
     private String phone;
     private String adress;
-    private ArrayList<User> users;
+    private ArrayList<Empleado> users;
     private ArrayList<MovimientoDinero> transactions;
     private Date createdAt;
     private Date updatedAt;
@@ -18,7 +20,7 @@ public class Empresa {
                    String document,
                    String phone,
                    String adress,
-                   ArrayList<User> users,
+                   ArrayList<Empleado> users,
                    ArrayList<MovimientoDinero> transactions,
                    Date createdAt,
                    Date updatedAt) {
@@ -36,10 +38,6 @@ public class Empresa {
     public long getId() {
         return id;
     }
-
-    /*public void setId(long id) {
-        this.id = id;
-    }*/
 
     public String getName() {
         return name;
@@ -72,11 +70,11 @@ public class Empresa {
         this.adress = adress;
     }
 
-    public ArrayList<User> getUsers() {
+    public ArrayList<Empleado> getUsers() {
         return users;
     }
 
-    public void setUsers(ArrayList<User> users) {
+    public void setUsers(ArrayList<Empleado> users) {
         this.users = users;
     }
 
@@ -92,15 +90,11 @@ public class Empresa {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
+    public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }
 
     public Date getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
+    public void setUpdatedAt(Date updatedAt) { this.updatedAt = updatedAt; }
 }

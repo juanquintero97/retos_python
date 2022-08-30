@@ -1,30 +1,41 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
+import org.springframework.lang.NonNull;
 import java.util.*;
 
 public class Empleado {
     private long id;
     private String name;
     private String email;
+    private Profile profile;
+    private Enum_RoleName role;
     private Empresa enterprise;
-    private String role;
     private ArrayList<MovimientoDinero> transactions;
     private Date createdAt;
     private Date updatedAt;
 
-    public Empleado(String name, String email, Empresa enterprise, String role) {
+    public Empleado(@NonNull long id,
+                    String name,
+                    String email,
+                    Profile profile,
+                    Enum_RoleName role,
+                    Empresa enterprise,
+                    ArrayList<MovimientoDinero> transactions,
+                    Date createdAt,
+                    Date updatedAt) {
+        this.id = id;
         this.name = name;
         this.email = email;
-        this.enterprise = enterprise;
+        this.profile = profile;
         this.role = role;
+        this.enterprise = enterprise;
+        this.transactions = transactions;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -39,24 +50,24 @@ public class Empleado {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String email) { this.email = email; }
+
+    public Profile getProfile() {
+        return profile;
     }
 
-    public Empresa getEnterprise() {
-        return enterprise;
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
+
+    public Enum_RoleName getRole() { return role; }
+
+    public void setRole(Enum_RoleName role) { this.role = role; }
+
+    public Empresa getEnterprise() { return enterprise; }
 
     public void setEnterprise(Empresa enterprise) {
         this.enterprise = enterprise;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     public ArrayList<MovimientoDinero> getTransactions() {

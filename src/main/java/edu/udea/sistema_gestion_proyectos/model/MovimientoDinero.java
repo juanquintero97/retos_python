@@ -1,5 +1,7 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
+import org.springframework.lang.NonNull;
+
 import java.util.*;
 
 public class MovimientoDinero {
@@ -11,18 +13,18 @@ public class MovimientoDinero {
     private Date createdAt;
     private Date updatedAt;
 
-    public MovimientoDinero(String concept, float amount, Empleado user) {
+    public MovimientoDinero(@NonNull long id, String concept, float amount, Empleado user, Empresa enterprise, Date createdAt, Date updatedAt) {
+        this.id = id;
         this.concept = concept;
         this.amount = amount;
         this.user = user;
+        this.enterprise = enterprise;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getConcept() {
