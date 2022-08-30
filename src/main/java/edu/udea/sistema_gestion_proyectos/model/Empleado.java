@@ -1,5 +1,6 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
+import edu.udea.sistema_gestion_proyectos.enums.Enum_RoleName;
 import org.springframework.lang.NonNull;
 import java.util.*;
 
