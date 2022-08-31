@@ -1,9 +1,5 @@
 package edu.udea.sistema_gestion_proyectos;
 
-import edu.udea.sistema_gestion_proyectos.model.Empleado;
-import edu.udea.sistema_gestion_proyectos.model.Empresa;
-import edu.udea.sistema_gestion_proyectos.model.MovimientoDinero;
-
 public class test {
     public static void main(String [] Args){
         /*Empresa empresa1 = new Empresa("Equipo 99","900665478-7","3335446","La nube");

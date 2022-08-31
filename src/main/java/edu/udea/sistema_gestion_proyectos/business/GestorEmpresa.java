@@ -11,8 +11,8 @@ public class GestorEmpresa {
     public GestorEmpresa(){
         this.empresas = new ArrayList<>();
 
-        this.empresas.add(new Empresa(1,"Team 99","100-1","6027776543","Cali",null,null,new Date(),new Date()));
-        this.empresas.add(new Empresa(2,"La Bastilla","200-1","6027444543","Medellin",null,null,new Date(),new Date()));
+        this.empresas.add(new Empresa(1,"Team_99","100-1","6027776543","Cali",null,null,new Date(),new Date()));
+        this.empresas.add(new Empresa(2,"La_Bastilla","200-1","6027444543","Medellin",null,null,new Date(),new Date()));
     }
 
     public Empresa getEmpresa(String nombreEmpresa) throws Exception {
