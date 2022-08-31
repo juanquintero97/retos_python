@@ -15,12 +15,12 @@ public class EmpresaControlador {
     @Autowired
     private GestorEmpresa gestorEmpresa;
 
-    @GetMapping("/empresas")
+    @GetMapping("/enterprises")
     public ResponseEntity<ArrayList<Empresa>> getEmpresas(){
         return new ResponseEntity<>(gestorEmpresa.getEmpresas(), HttpStatus.OK);
     }
 
-    @GetMapping("/empresa")
+    @GetMapping("/enterprise")
     public ResponseEntity<Object> getUsuario(@RequestParam String name){
         try {
             Empresa empresa = gestorEmpresa.getEmpresa(name);
@@ -30,7 +30,7 @@ public class EmpresaControlador {
         }
     }
 
-    @PostMapping("/empresa")
+    @PostMapping("/enterprise")
     public ResponseEntity<String> postEmpresa(@RequestBody Empresa empresaParametro){
         try {
             String mensaje = gestorEmpresa.setEmpresa(empresaParametro);
