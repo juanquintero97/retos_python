@@ -2,7 +2,8 @@ package edu.udea.sistema_gestion_proyectos.business;
 
 import edu.udea.sistema_gestion_proyectos.model.Empresa;
 import org.springframework.stereotype.Service;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
 
 @Service
 public class GestorEmpresa {
@@ -36,6 +37,7 @@ public class GestorEmpresa {
     public Empresa updateEmpresa(Empresa empresaUpdate,String nombreEmpresa) throws Exception {
         try {
             Empresa empresaSaved = getEmpresa(nombreEmpresa);
+            //!Strings.isNullOrEmpty(empresaUpdate.getName();
             if(empresaUpdate.getName() != null && !empresaUpdate.getName().equals("")){
                 empresaSaved.setName(empresaUpdate.getName());
             }
@@ -96,7 +98,4 @@ public class GestorEmpresa {
     public void setEmpresas(ArrayList<Empresa> empresas){
         this.empresas=empresas;
     }
-
-
-
 }

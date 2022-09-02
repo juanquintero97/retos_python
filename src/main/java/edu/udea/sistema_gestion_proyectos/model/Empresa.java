@@ -1,7 +1,6 @@
 package edu.udea.sistema_gestion_proyectos.model;
 
 import org.springframework.lang.NonNull;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -58,6 +57,7 @@ public class Empresa {
     public String getPhone() {
         return phone;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }

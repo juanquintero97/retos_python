@@ -1,4 +1,4 @@
 package edu.udea.sistema_gestion_proyectos.business;
 
-public class GerstorEmpleado {
+public class GestorEmpleado {
 }
